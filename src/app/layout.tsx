@@ -1,9 +1,12 @@
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
   title: "Orbitech Security Company Ltd",
   description:
-    "Business Compliance, Technology & Security Solutions",
+    "CAC Registration, Tax Compliance, Technology Solutions and Security Services",
 };
 
 export default function RootLayout({
@@ -13,7 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+
+        <Navbar />
+
+        {children}
+
+        <Footer />
+
+        <WhatsAppButton />
+
+      </body>
     </html>
   );
 }
