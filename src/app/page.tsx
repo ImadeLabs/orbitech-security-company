@@ -1,209 +1,248 @@
 export default function Home() {
-  const pillars = [
+  const services = [
     {
       title: "Corporate Compliance",
-      description:
-        "CAC Registration, Tax Services, ITF, NSITF and BPP registration support.",
+      items: [
+        "CAC Registration",
+        "Tax Services",
+        "ITF Registration",
+        "NSITF Registration",
+        "BPP Registration",
+      ],
     },
     {
       title: "Technology Solutions",
-      description:
-        "Software Engineering, Data Engineering, Automation and Cybersecurity.",
+      items: [
+        "Software Development",
+        "Data Engineering",
+        "Cybersecurity",
+        "Automation Solutions",
+        "IT Consulting",
+      ],
     },
     {
       title: "Security Services",
-      description:
-        "Security Guards, CCTV Installation and Access Control Solutions.",
+      items: [
+        "Security Guards",
+        "CCTV Installation",
+        "Access Control Systems",
+        "Estate Security",
+        "Surveillance Solutions",
+      ],
     },
   ];
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Navbar */}
-      <header className="border-b bg-white sticky top-0 z-50">
+      {/* HEADER */}
+      <header className="sticky top-0 bg-white border-b z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <h1 className="font-bold text-xl text-slate-900">
-            Orbitech Security Company Ltd
-          </h1>
+          <div>
+            <h1 className="font-bold text-2xl text-slate-900">
+              Orbitech Technologies
+            </h1>
+            <p className="text-xs text-gray-500">
+              A Division of Orbitech Security Company Ltd
+            </p>
+          </div>
 
-          <nav className="hidden md:flex gap-8 text-sm font-medium">
-            <a href="#" className="hover:text-blue-600">
-              Home
-            </a>
-            <a href="#" className="hover:text-blue-600">
-              Services
-            </a>
-            <a href="#" className="hover:text-blue-600">
-              About
-            </a>
-            <a href="#" className="hover:text-blue-600">
-              Contact
-            </a>
+          <nav className="hidden md:flex gap-8 font-medium">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
           </nav>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="bg-slate-950 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-28">
+      {/* HERO */}
+      <section
+        id="home"
+        className="bg-slate-950 text-white py-28"
+      >
+        <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-4xl">
             <span className="text-blue-400 font-medium">
               Business • Technology • Security
             </span>
 
-            <h1 className="text-5xl md:text-7xl font-bold mt-6 leading-tight">
-              Business Compliance,
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight mt-6">
+              Business Registration,
               <br />
               Technology &
               <br />
-              Security Solutions
+              Security Services
             </h1>
 
-            <p className="mt-8 text-xl text-slate-300 max-w-2xl">
-              Helping businesses register, stay compliant, automate operations,
-              and secure their assets across Nigeria.
+            <p className="text-xl text-slate-300 mt-8 max-w-3xl">
+              CAC Registration, Tax Compliance, ITF, NSITF, BPP,
+              Software Development, Cybersecurity and Security
+              Services for startups, SMEs, NGOs and corporate
+              organizations across Nigeria.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mt-10">
               <a
                 href="tel:+2347037819477"
-                className="bg-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-700"
+                className="bg-blue-600 px-6 py-4 rounded-lg font-semibold"
               >
-                Call Now
+                Call +2347037819477
               </a>
 
               <a
                 href="https://wa.me/2347037819477"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="border border-slate-600 px-6 py-3 rounded-lg hover:bg-slate-800"
+                className="border border-slate-600 px-6 py-4 rounded-lg"
               >
-                WhatsApp
+                WhatsApp Us
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section className="py-24">
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="py-24"
+      >
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">
             One Partner For Business Growth
           </h2>
 
           <p className="text-lg text-gray-600 leading-relaxed">
-            Orbitech Security Company Ltd provides corporate compliance,
-            technology solutions and security services to startups, SMEs, NGOs,
-            estates and corporate organizations across Nigeria.
+            We help businesses stay compliant, build technology
+            solutions and protect their people and assets. Our
+            services cover corporate registration, tax compliance,
+            software engineering, cybersecurity and professional
+            security services.
           </p>
         </div>
       </section>
 
-      {/* Services */}
-      <section className="bg-gray-50 py-24">
+      {/* SERVICES */}
+      <section
+        id="services"
+        className="bg-gray-50 py-24"
+      >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold">Our Core Services</h2>
+            <h2 className="text-4xl font-bold">
+              Our Core Services
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((pillar) => (
+            {services.map((service) => (
               <div
-                key={pillar.title}
-                className="bg-white rounded-2xl p-8 border shadow-sm hover:shadow-lg transition"
+                key={service.title}
+                className="bg-white border rounded-2xl p-8 shadow-sm hover:shadow-lg transition"
               >
-                <h3 className="text-2xl font-bold mb-4">
-                  {pillar.title}
+                <h3 className="text-2xl font-bold mb-6">
+                  {service.title}
                 </h3>
 
-                <p className="text-gray-600">
-                  {pillar.description}
-                </p>
+                <ul className="space-y-3 text-gray-600">
+                  {service.items.map((item) => (
+                    <li key={item}>✓ {item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* WHY CHOOSE US */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-10">
-            <div>
-              <h3 className="text-3xl font-bold">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4">
                 Fast Delivery
               </h3>
-              <p className="mt-4 text-gray-600">
-                Quick processing and reliable support.
+              <p className="text-gray-600">
+                Quick processing of registrations,
+                documentation and technology projects.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-3xl font-bold">
-                Professional Team
+            <div className="border rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4">
+                Experienced Team
               </h3>
-              <p className="mt-4 text-gray-600">
-                Experienced consultants and technology experts.
+              <p className="text-gray-600">
+                Business consultants, engineers and
+                security professionals working together.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-3xl font-bold">
+            <div className="border rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-4">
                 Trusted Solutions
               </h3>
-              <p className="mt-4 text-gray-600">
-                Helping organizations remain compliant and secure.
+              <p className="text-gray-600">
+                Reliable support for organizations,
+                estates, SMEs and government contractors.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact */}
-      <section className="bg-blue-600 text-white py-24">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="bg-blue-600 text-white py-24"
+      >
+        <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready To Work With Orbitech?
+            Contact Orbitech Today
           </h2>
 
-          <p className="text-xl mb-6">
-            Let's discuss your compliance, technology, or security needs.
-          </p>
+          <div className="space-y-3 text-lg">
+            <p>📞 +2347037819477</p>
+            <p>📍 Abuja, Nigeria</p>
+            <p>📧 info@orbitechsltd.com</p>
+          </div>
 
-          <p className="text-2xl font-bold">
-            +234 703 781 9477
-          </p>
+          <div className="flex justify-center gap-4 mt-8 flex-wrap">
+            <a
+              href="tel:+2347037819477"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold"
+            >
+              Call Now
+            </a>
 
-          <p className="mt-2">
-            info@orbitechsltd.com
-          </p>
-
-          <div className="mt-8">
             <a
               href="https://wa.me/2347037819477"
               target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold"
+              className="border border-white px-6 py-3 rounded-lg"
             >
-              Chat on WhatsApp
+              WhatsApp
             </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 text-white py-10">
+      {/* FOOTER */}
+      <footer className="bg-slate-950 text-white py-8">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p>
-            © 2026 Orbitech Security Company Ltd. All Rights Reserved.
-          </p>
-
-          <p className="mt-2 text-slate-400">
-            Business Compliance • Technology Solutions • Security Services
+            © 2026 Orbitech Technologies. All Rights Reserved.
           </p>
         </div>
       </footer>
+
+      {/* FLOATING WHATSAPP */}
+      <a
+        href="https://wa.me/2347037819477"
+        target="_blank"
+        className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg font-semibold"
+      >
+        WhatsApp
+      </a>
     </main>
   );
 }
