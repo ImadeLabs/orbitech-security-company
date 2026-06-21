@@ -18,6 +18,7 @@ export default function Navbar() {
             alt="Orbitech"
             width={45}
             height={45}
+            className="h-auto w-auto"
           />
 
           <div>
